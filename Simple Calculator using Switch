@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.*;
+
+class Check{
+	public static void main(String[] args){
+    Scanner EX = new Scanner(System.in);
+    
+    int a, b, c, d;
+    
+	System.out.print("Enter 1st number: ");
+    a = EX.nextInt();
+    System.out.print("Enter 2nd number: ");
+    b = EX.nextInt();
+
+    System.out.println("Choose which operation you want to use: ");
+    System.out.println("1. Addition \n2. Subtraction \n3. Multiplication \n4. Division\n");
+    System.out.print("Enter: ");
+    c = EX.nextInt();
+    
+    switch (c){
+    
+    case 1:
+    	d = a + b;
+        System.out.println("The sum of "+a+" and "+b+" is "+d);
+        break;
+        
+    case 2:
+    	d = a - b;
+        System.out.println("The difference of "+a+" and "+b+" is "+d);
+        break;
+        
+    case 3:
+   		d = a * b;
+        System.out.println("The product of "+a+" and "+b+" is "+d);
+        break;
+        
+    case 4:
+    	d = a / b;
+        System.out.println("The quotient of "+a+" and "+b+" is "+d);
+        break;
+        
+    default:
+    	System.out.println("Enter a valid option");
+        break;
+    } 
+  }
+}
