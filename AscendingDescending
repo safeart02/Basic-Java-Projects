@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class AscDesc {
+    public static void main (String[] args) {
+        Scanner object = new Scanner (System.in);
+        int n, i, j, temp;
+        
+        System.out.print("How many numbers would you like to enter: ");
+        n = object.nextInt();
+        int[] arr = new int [n];
+        
+        for(i = 0; i < n; i++) {
+            System.out.print("Element {" +i+ "} - ");
+            arr[i] = object.nextInt();
+        }
+        
+        System.out.print("\nAscending elements are: ");
+        
+        for(i = 0; i < n; i++) {
+        	for(j = i + 1; j < n; j++) {
+        		if (arr[i] > arr[j]) {
+        			temp = arr[i];
+        			arr[i] = arr[j];
+        			arr[j] = temp;
+        		}
+        	}
+        }
+        
+        for(i = 0; i < n; i++) {
+        	System.out.print(arr[i]+" ");
+        }
+        
+        System.out.print("\nDescending elements are: ");
+        for(i = 0; i < n; i++) {
+        	for(j = i + 1; j < n; j++) {
+        		if (arr[i] < arr[j]) {
+        			temp = arr[i];
+        			arr[i] = arr[j];
+        			arr[j] = temp;
+        		}
+        	}
+        }
+        
+        for(i = 0; i < n; i++) {
+        	System.out.print(arr[i]+" ");
+        }
+    }
+}
